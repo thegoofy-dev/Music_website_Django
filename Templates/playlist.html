@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+{% block body %}
+    <h2>This is Playlists Section</h2>
+    <ol>
+        <li><a href="{%url 'playlists:new_release'%}">New Releases</a></li>
+        <li><a href="{%url 'playlists:albums'%}">Albums</a></li>
+        <li><a href="{%url 'playlists:podcasts'%}">Podcasts</a></li>
+        <li><a href="{%url 'playlists:fav_music'%}">Favourite Musics</a></li>
+        
+    </ol>
+{% endblock body%}

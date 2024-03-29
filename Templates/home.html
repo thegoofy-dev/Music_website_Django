@@ -1,0 +1,114 @@
+{% extends "base.html" %} {%load static%} {% block body %}
+<!-- HOME PAGE LOGIN & SIGNUP CONTAINER-->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="container-fluid carousel-inner m-1 px-0">
+    <div class="carousel-item active card">
+      <img
+        src="{% static 'Images/home_background.jpg' %}"
+        class="d-block w-100 vh-100 bg-bg-opacity-75"
+        alt="..."
+      />
+      <!-- TEXT Overlay -->
+      <div
+        class="card-img-overlay d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="text-center mt-5 mb-lg-5">
+          <h1 class="display-3 fw-bold text-light">Welcome to MelodyMix</h1>
+          <p class="lead text-light">
+            Immerse yourself in a world of endless melodies, where every beat
+            tells a story and every note resonates with emotion. At MelodyMix,
+            we're more than just a music platform - we're your ultimate
+            destination for discovering, exploring, and experiencing the power
+            of music like never before.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center gap-3 mt-lg-5">
+          <a class="btn btn-outline-light btn-lg" href="{% url 'htmlwebsite:explore'%}">Listen Songs</a>
+          <a
+            class="btn btn-outline-warning btn-lg"
+            href="{% url 'htmlwebsite:signup' %}"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARDS -->
+  <h2
+    class="link-offset-3-hover link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover link-opacity-50-hover text-center mt-1 fs-1 lead"
+  >
+    Explore Songs
+  </h2>
+<div
+  class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center">
+  <div
+    class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">Genre Songs</h2>
+
+      <p class="lead">
+        Explore Pop, Hip-Hop, Rap, classical and many more songs...
+      </p>
+
+      <p>
+        <a
+        href="{% url 'htmlwebsite:explore'%}"
+          class="lead link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover link-opacity-50-hover"
+        >
+          Click to Listen...
+        </a>
+      </p>
+
+      <div class="img-container">
+        <img class="rounded-2 center-block shadow-lg p-1 mb-2 bg-white rounded
+        img-fluid" src="{% static "Images/c1.jpg" %}" alt="">
+      </div>
+    </div>
+  </div>
+  <div
+    class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Featured & Popular Songs</h2>
+      <p class="lead">Listen to New Releases, Top-Hits songs...</p>
+      <p>
+        <a
+        href="{% url 'htmlwebsite:explore'%}"
+          class="lead link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover link-opacity-50-hover"
+          >Click to Listen...</a
+        >
+      </p>
+      <div class="img-container">
+        <img class="rounded-2 center-block shadow p-2 mb-2 bg-dark rounded
+        img-fluid" src="{% static "Images/c2.jpg" %}" alt="">
+      </div>
+    </div>
+  </div>
+  <div
+    class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">Artists</h2>
+
+      <p class="lead">
+        Select songs from your Favourites Artists...
+      </p>
+
+      <p>
+        <a
+          href="{% url 'htmlwebsite:explore'%}"
+          class="lead link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover link-opacity-50-hover"
+        >
+          Click to Listen...
+        </a>
+      </p>
+
+      <div class="img-container">
+        <img class="rounded-2 center-block shadow-lg p-1 mb-2 bg-white rounded
+        img-fluid" src="{% static "Images/c3.jpg" %}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+ 
+{% endblock body %}

@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <h1>{{ song.title }}</h1>
+    <p>Artist: {{ song.artist }}</p>
+    
+    <!-- Embed audio player for the selected song -->
+    <audio controls>
+        <source src="{{ song.song_files.url }}" type="audio/mp3">
+
+        Your browser does not support the audio element.
+    </audio>
+</div>
+{% endblock %}

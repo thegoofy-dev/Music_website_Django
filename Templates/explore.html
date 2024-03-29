@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="container">
+    <h2 class="text-center mb-4 mt-4">Classical Songs</h2> <!-- Title: Trending Songs -->
+    <div class="row justify-content-center"> <!-- Center align the row -->
+        {% for i in class %}
+        <div class="col-md-3"> <!-- Each card will occupy 3 out of 12 columns on medium screens and above -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ i.title }}</h5>
+                    <p class="card-text">By {{i.artist}}</p>
+                    <a class="btn btn-outline-success btn-lg" href="{% url 'htmlwebsite:song_post' id=i.song_id %}">Listen Song</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<hr>
+
+<div class="container">
+    <h2 class="text-center mb-4 mt-4">Trending Songs</h2> <!-- Title: Trending Songs -->
+    <div class="row justify-content-center"> <!-- Center align the row -->
+        {% for y in trend %}
+        <div class="col-md-3"> <!-- Each card will occupy 3 out of 12 columns on medium screens and above -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ y.title }}</h5>
+                    <p class="card-text">By {{y.artist}}</p>
+                    <a class="btn btn-outline-success btn-lg" href={% url 'htmlwebsite:song_post' id=y.song_id %}>Listen Song</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<hr>
+
+<div class="container">
+    <h2 class="text-center mb-4 mt-4">Devotional Songs Songs</h2> <!-- Title: Trending Songs -->
+    <div class="row justify-content-center"> <!-- Center align the row -->
+        {% for z in devote %}
+        <div class="col-md-3"> <!-- Each card will occupy 3 out of 12 columns on medium screens and above -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ z.title }}</h5>                    
+                    <p class="card-text">By {{z.artist}}</p>
+                    <a class="btn btn-outline-success btn-lg" href="{% url 'htmlwebsite:song_post' id=z.song_id %}">Listen Song</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<hr>
+{% endblock body %}

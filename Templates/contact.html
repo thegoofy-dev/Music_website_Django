@@ -1,0 +1,34 @@
+{% extends "base.html" %} 
+{%load static%}
+{% block body %}
+<div class="Container mx-5">
+    <div class="container col">
+        <img class="mb-4 mt-2 bg-dark" src="{% static 'Images/Logo.png'%}" alt="" width="72" height="57" />
+        <span class="fs-1">M</span><span class="fs-4">elody</span><span class="fs-2">M</span><span
+            class="fs-4">ix</span><span class="fs-1">X</span>
+    </div>
+    <form>
+        <h1 class="h3 mb-3 fw-normal">Let's Start a Converstion <i class="fa-regular fa-comments"></i></h1>
+        <div class="form-floating mb-2">
+            <input type="name" class="form-control" id="floatingInput" placeholder="" />
+            <label for="floatingInput">Your Name</label>
+        </div>
+        <div class="form-floating mb-2">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-2">
+            <input type="input" class="form-control" id="floatingInput" placeholder="subject" />
+            <label for="floatingInput">Subject</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2Disabled">Message</label>
+        </div>
+        <button type="submit" class="btn btn-outline-primary w-25 btn-lg py-2">Submit</button>
+        <button type="reset" class="btn btn-outline-secondary w-25 btn-lg py-2">Reset</button>
+    </form>
+</div>
+
+{% endblock body %}
