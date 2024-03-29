@@ -1,0 +1,12 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+  
+
+.navbar { z-index: 1; } /* Ensure navbar appears above section */
+.footer { z-index: 1; } /* Ensure footer appears above section */
